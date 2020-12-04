@@ -5,7 +5,7 @@
       color="primary"
       dark
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="openSideMenu"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
         <span>マイアドレス帳</span>
       </v-toolbar-title>
@@ -32,5 +32,10 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    openSideMenu () {
+      this.$store.dispatch('toggleSideMenu')
+    }
+  }
 };
 </script>

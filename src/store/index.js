@@ -13,8 +13,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    toggleSideMenu ({ commit })
+    toggleSideMenu ({ commit }) {
       commit('toggleSideMenu')
+    }
   },
   modules: {
   }
